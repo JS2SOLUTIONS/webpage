@@ -42,13 +42,7 @@ document.addEventListener("DOMContentLoaded", () => {
     window.location.href = `mailto:${SITE_CONFIG.email}`;
   });
 
-  // ------------------------------
-  // VIDEO HERO (desktop)
-  // ------------------------------
-  const heroVideo = document.querySelector(".hero-video source");
-  if (heroVideo) {
-    heroVideo.src = SITE_CONFIG.heroVideoSrc;
-    heroVideo.parentElement.load();
-  }
+
+
 
 });
