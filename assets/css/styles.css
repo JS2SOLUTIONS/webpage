@@ -45,7 +45,7 @@ body {
     align-items: center;
     gap: 15px;
     /* espacio entre logo y texto */
-    font-size: 1.5rem;
+    font-size: 1.6rem;
     font-weight: 600;
     color: var(--dark);
 }
@@ -210,6 +210,9 @@ footer {
 @media (max-width: 480px) {
     .header {
         padding: 15px 20px;
+        height: auto;
+        flex-direction: column; /* si quieres que logo y menu estén uno abajo del otro */
+        align-items: flex-start;
     }
 
     .hero-content {
@@ -518,8 +521,8 @@ footer {
 
 .hamburger span {
     display: block;
-    width: 25px;
-    height: 3px;
+    width: 28px;
+    height: 4px;
     background-color: var(--dark);
     border-radius: 2px;
     transition: all 0.3s ease;
@@ -549,12 +552,6 @@ footer {
 
     .nav-links.open {
         right: 0;
-    }
-
-    .nav-links a,
-    .nav-links button.dropbtn,
-    #btn-whatsapp {
-        width: 100%;
     }
 
     .dropdown-content {
