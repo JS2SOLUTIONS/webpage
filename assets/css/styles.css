@@ -416,11 +416,40 @@ footer {
         font-size: clamp(1.2rem, 4vw, 2rem);
         margin-left: 0.5rem;
     }
+
     .dropdown-content {
         min-width: clamp(80px, 40vw, 200px);
     }
+
     .dropdown-content a {
-    padding: clamp(0.6rem, 1.5vw, 0.8rem) clamp(0.8rem, 2vw, 1rem);
-    font-size: clamp(1.4rem, 2vw, 2rem);
-}
+        padding: clamp(0.6rem, 1.5vw, 0.8rem) clamp(0.8rem, 2vw, 1rem);
+        font-size: clamp(1.4rem, 2vw, 2rem);
+    }
+
+    .hero-content {
+        max-width: clamp(600px, 100%, 900px);
+    }
+
+    .hero-content h2 {
+        font-size: clamp(2rem, 7vw, 4rem);
+    }
+
+    .hero-content p {
+        margin-top: clamp(3rem, 2vw, 5rem);
+        font-size: clamp(2rem, 2vw, 3rem);
+    }
+
+    .hero-content button {
+        margin-top: clamp(1.5rem, 3vw, 2.5rem);
+        padding: clamp(1.5rem, 2vw, 2rem) clamp(4rem, 8vw, 20rem);
+        font-size: clamp(1rem, 2vw, 2.5rem);
+    }
+
+    #btn-whatsapp {
+        margin-top: clamp(1.5rem, 3vw, 2.5rem);
+        padding: clamp(1.5rem, 2vw, 2rem) clamp(4rem, 8vw, 20rem);
+        font-size: clamp(1rem, 2vw, 2.5rem);
+    }
+
+
 }
