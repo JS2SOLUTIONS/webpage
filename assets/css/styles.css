@@ -426,10 +426,6 @@ footer {
         font-size: clamp(1.4rem, 2vw, 2rem);
     }
 
-    .hero-content {
-        max-width: clamp(600px, 100%, 900px);
-    }
-
     .hero-content h2 {
         font-size: clamp(2rem, 7vw, 4rem);
     }
@@ -449,6 +445,32 @@ footer {
         margin-top: clamp(1.5rem, 3vw, 2.5rem);
         padding: clamp(1.5rem, 2vw, 2rem) clamp(4rem, 8vw, 20rem);
         font-size: clamp(1rem, 2vw, 2.5rem);
+    }
+
+    .about-content h1 {
+        font-size: clamp(3rem, 7vw, 8rem);
+    }
+
+    .about-content p {
+        font-size: clamp(1.5rem, 2.5vw, 4rem);
+    }
+
+    .about-cards .card {
+        font-size: clamp(1.5rem, 2vw, 4rem);
+    }
+
+    .btn-ver-mas {
+        font-size: clamp(1.5rem, 2vw, 4rem);
+
+    }
+
+    .btn-ver-mas:hover {
+        background-color: #a8c1ff;
+        transform: translateY(-0.2rem);
+    }
+
+    .gallery-row img {
+        width: clamp(60px, 8vw, 150px);
     }
 
 
