@@ -502,3 +502,65 @@ footer {
     transform: scale(1.08);
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
+
+
+
+/* Estilos hamburguesa */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    border: none;
+    background: none;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.hamburger span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: var(--dark);
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+/* Mostrar hamburger en móviles */
+@media (max-width: 768px) {
+    .hamburger {
+        display: flex;
+    }
+
+    .nav-links {
+        position: fixed;
+        top: 60px; /* debajo del header */
+        right: -100%;
+        width: 70%;
+        height: 100vh;
+        background-color: rgba(255,255,255,0.95);
+        backdrop-filter: blur(10px);
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 20px;
+        gap: 20px;
+        transition: right 0.3s ease;
+        z-index: 150;
+    }
+
+    .nav-links.open {
+        right: 0;
+    }
+
+    .nav-links a,
+    .nav-links button.dropbtn,
+    #btn-whatsapp {
+        width: 100%;
+    }
+
+    .dropdown-content {
+        position: static;
+        box-shadow: none;
+        border-radius: 0;
+        width: 100%;
+    }
+}

@@ -14,10 +14,28 @@
 
     <header class="header">
         <h1 data-headName></h1>
-        <nav>
+        <!-- Botón hamburguesa -->
+        <button class="hamburger" aria-label="Abrir menú">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <nav class="nav-links">
             <a href="index.html">Inicio</a>
-            <!-- <a href="services.html">Servicios</a>    -->
-            <!-- Dropdown servicios -->
+            <div class="dropdown">
+                <button class="dropbtn">
+                    Servicios <span class="arrow">&#9660;</span>
+                </button>
+                <div class="dropdown-content">
+                    <a href="services.html#infraestructura">Seguridad de Infraestructura</a>
+                    <a href="services.html#auditorias">Auditorías y Cumplimiento</a>
+                    <a href="services.html#monitoreo">Monitoreo y Respuesta</a>
+                </div>
+            </div>
+            <a href="about-us.html">Sobre Nosotros</a>
+        </nav>
+        <!-- <nav>
+            <a href="index.html">Inicio</a>
             <div class="dropdown">
                 <button class="dropbtn">
                     <a href="services.html">Servicios</a><span class="arrow">&#9660;</span>
@@ -29,7 +47,7 @@
                 </div>
             </div>
             <a href="about-us.html">Sobre Nosotros</a>
-        </nav>
+        </nav> -->
     </header>
 
     <section class="hero">
