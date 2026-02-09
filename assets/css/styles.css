@@ -392,6 +392,53 @@ footer {
 }
 
 /* ==============================
+   FOOTER BUTTONS
+============================== */
+.footer-buttons {
+    margin-top: clamp(1rem, 3vw, 2rem);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: clamp(0.8rem, 3vw, 1.5rem);
+}
+
+.footer-btn {
+    width: clamp(42px, 8vw, 52px);
+    height: clamp(42px, 8vw, 52px);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #0f172a;
+    transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s;
+}
+
+.footer-btn img {
+    width: 55%;
+    height: 55%;
+    object-fit: contain;
+}
+
+/* Colores por red */
+.footer-btn.linkedin {
+    background: #0A66C2;
+}
+
+.footer-btn.whatsapp {
+    background: #25D366;
+}
+
+.footer-btn.email {
+    background: #334155;
+}
+
+/* Hover */
+.footer-btn:hover {
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 0.8rem 1.5rem rgba(0, 0, 0, 0.25);
+}
+
+/* ==============================
    MOBILE OPTIMIZATION FOR HEADER (VERTICAL PHONES)
 ============================= */
 /* ==============================
