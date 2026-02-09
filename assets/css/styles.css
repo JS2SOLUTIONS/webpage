@@ -2,7 +2,7 @@
 
 /* ==============================
    VARIABLES
-============================== */
+============================= */
 :root {
     --blue-main: #1f4fd8;
     --blue-soft: #e8efff;
@@ -11,7 +11,7 @@
 
 /* ==============================
    RESET
-============================== */
+============================= */
 * {
     margin: 0;
     padding: 0;
@@ -26,7 +26,7 @@ body {
 
 /* ==============================
    HEADER
-============================== */
+============================= */
 .header {
     position: fixed;
     width: 100%;
@@ -38,6 +38,9 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    /* --- altura mínima y flexible usando clamp --- */
+    min-height: clamp(60px, 8vh, 100px);
 }
 
 .header h1[data-headName] {
@@ -62,32 +65,8 @@ body {
 }
 
 /* ==============================
-   HEADER MOBILE (opcional si quieres ajustes extra)
-============================== */
-@media (max-width: 414px) {
-    .header {
-        padding: clamp(0.5rem, 2vw, 0.8rem) clamp(1rem, 4vw, 1.5rem);
-    }
-
-    .header h1[data-headName] {
-        gap: clamp(0.3rem, 2vw, 0.6rem);
-        font-size: clamp(1rem, 5vw, 1.5rem);
-    }
-
-    .header h1[data-headName] img {
-        height: clamp(30px, 10vw, 40px);
-    }
-
-    .header a {
-        margin-left: clamp(0.3rem, 2vw, 0.8rem);
-        font-size: clamp(0.8rem, 4vw, 1rem);
-    }
-}
-
-
-/* ==============================
    HERO
-============================== */
+============================= */
 .hero {
     position: relative;
     height: 100vh;
@@ -151,7 +130,7 @@ body {
 
 /* ==============================
    CARDS
-============================== */
+============================= */
 .cards {
     padding: clamp(4rem, 10vw, 6rem) clamp(2rem, 8vw, 5rem);
     display: grid;
@@ -174,7 +153,7 @@ body {
 
 /* ==============================
    FOOTER
-============================== */
+============================= */
 footer {
     padding: clamp(1.5rem, 3vw, 3rem);
     text-align: center;
@@ -184,7 +163,7 @@ footer {
 
 /* ==============================
    DROPDOWN HEADER
-============================== */
+============================= */
 .dropdown {
     position: relative;
     display: inline-block;
@@ -243,10 +222,9 @@ footer {
     display: block;
 }
 
-
 /* ==============================
    BOTON WHATSAPP
-============================== */
+============================= */
 
 #btn-whatsapp {
     margin-top: 20px;
@@ -266,10 +244,9 @@ footer {
     /* verde más oscuro al pasar el mouse */
 }
 
-
-/* ==========================
+/* ==============================
    ABOUT US HERO
-========================== */
+============================= */
 .about-hero {
     display: flex;
     justify-content: center;
@@ -412,4 +389,31 @@ footer {
 .gallery-row img:hover {
     transform: scale(1.08);
     box-shadow: 0 0.5rem 1.25rem rgba(0, 0, 0, 0.15);
+}
+
+/* ==============================
+   MOBILE OPTIMIZATION FOR HEADER (VERTICAL PHONES)
+============================= */
+/* ==============================
+   MOBILE OPTIMIZATION FOR HEADER (VERTICAL PHONES)
+============================= */
+@media (max-width: 1024px) {
+    .header {
+        min-height: clamp(100px, 12vh, 200px);
+        padding: clamp(0.3rem, 5vw, 1.5rem) clamp(1rem, 5vw, 2rem);
+        justify-content: space-between;
+    }
+
+    .header h1[data-headName] {
+        font-size: clamp(1.4rem, 6vw, 1.8rem);
+    }
+
+    .header h1[data-headName] img {
+        height: clamp(50px, 8vw, 250px);
+    }
+
+    .header a {
+        font-size: clamp(1.2rem, 4vw, 2rem);
+        margin-left: 0.5rem;
+    }
 }
