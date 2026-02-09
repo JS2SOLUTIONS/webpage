@@ -5,6 +5,7 @@ const SITE_CONFIG = {
     year: new Date().getFullYear(),
     logoSrc: "assets/images/logo.png",
     heroVideoSrc: "assets/video/hero2.mp4",
-    heroMobileSrc: "assets/images/hero-mobile.jpg", // fallback móvil
-    faviconSrc: "assets/images/logo.png"
+    heroMobileSrc: "assets/images/hero-mobile.jpg",
+    faviconSrc: "assets/images/logo.png",
+    whatsapp: "+573002584013"
 };

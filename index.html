@@ -1,56 +1,64 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-  <meta charset="UTF-8">
-  <link rel="icon" type="image/png" href="assets/images/logo.png" />
-  <title data-headName>Inicio |</title>
-  <link rel="stylesheet" href="assets/css/styles.css">
-  <script defer src="assets/js/config.js"></script>
-  <script defer src="assets/js/main.js"></script>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/png" href="assets/images/logo.png" />
+    <title data-headName>Inicio |</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <script defer src="assets/js/config.js"></script>
+    <script defer src="assets/js/main.js"></script>
 </head>
 
 <body>
 
-<header class="header">
-   <h1 data-company></h1>
-  <nav>
-    <a href="index.html">Inicio</a>
-    <a href="services.html">Servicios</a>   
-    <a href="about-us.html">Sobre Nosotros</a>
-  </nav>
-</header>
+    <header class="header">
+        <h1 data-headName></h1>
+        <nav>
+            <a href="index.html">Inicio</a>
+            <!-- <a href="services.html">Servicios</a>    -->
+            <!-- Dropdown servicios -->
+            <div class="dropdown">
+                <button class="dropbtn">
+                    <a href="services.html">Servicios</a><span class="arrow">&#9660;</span>
+                </button>
+                <div class="dropdown-content">
+                    <a href="services.html#infraestructura">Seguridad de Infraestructura</a>
+                    <a href="services.html#auditorias">Auditorías y Cumplimiento</a>
+                    <a href="services.html#monitoreo">Monitoreo y Respuesta</a>
+                </div>
+            </div>
+            <a href="about-us.html">Sobre Nosotros</a>
+        </nav>
+    </header>
 
-<section class="hero">
-  <video
-    class="hero-video"
-    autoplay
-    muted
-    loop
-    playsinline
-    preload="auto"
-  >
-    <source src="assets/video/hero.mp4" type="video/mp4">
-  </video>
+    <section class="hero">
+        <video class="hero-video" autoplay muted loop playsinline preload="auto">
+            <source src="assets/video/hero.mp4" type="video/mp4">
+        </video>
 
-  <div class="hero-overlay"></div>
+        <div class="hero-overlay"></div>
 
-  <div class="hero-content">
-    <h2>Seguridad digital para empresas modernas</h2>
-    <p>Protegemos tu información con tecnología confiable.</p>
-    <button id="btn-contact">Hablar con un experto</button>
-  </div>
-</section>
+        <div class="hero-content">
+            <h2>Expertos en Ciberseguridad y Networking</h2>
+            <p>Protegiendo infraestructuras tecnológicas con soluciones de ciberseguridad, como Netskope y Fortinet,
+                además de soluciones de Networking e infraestructura.</p>
+            <button id="btn-contact">Envíenos un email</button>
+            <button id="btn-whatsapp">Escríbenos por WhatsApp</button>
+        </div>
+    </section>
 
 
-<section class="cards">
-  <div class="card">Seguridad de Infraestructura</div>
-  <div class="card">Auditorías y Cumplimiento</div>
-  <div class="card">Monitoreo y Respuesta</div>
-</section>
+    <section class="cards">
+        <div class="card">Seguridad de Infraestructura</div>
+        <div class="card">Auditorías y Cumplimiento</div>
+        <div class="card">Monitoreo y Respuesta</div>
+    </section>
 
-<footer>
-  © <span data-year></span> <span data-company></span>
-</footer>
+    <footer>
+        © <span data-year></span> <span data-company></span>
+    </footer>
 
 </body>
+
 </html>
