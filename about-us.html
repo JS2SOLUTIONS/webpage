@@ -13,42 +13,22 @@
 <body>
 
   <header class="header">
-        <h1 data-headName></h1>
-        <!-- Botón hamburguesa -->
-        <button class="hamburger" aria-label="Abrir menú">
-            <span></span>
-            <span></span>
-            <span></span>
+    <h1 data-headName></h1>
+    <nav>
+      <a href="index.html">Inicio</a>
+      <div class="dropdown">
+        <button class="dropbtn">
+          <a href="services.html">Servicios</a><span class="arrow">&#9660;</span>
         </button>
-        <nav class="nav-links">
-            <a href="index.html">Inicio</a>
-            <div class="dropdown">
-                <button class="dropbtn">
-                    Servicios <span class="arrow">&#9660;</span>
-                </button>
-                <div class="dropdown-content">
-                    <a href="services.html#infraestructura">Seguridad de Infraestructura</a>
-                    <a href="services.html#auditorias">Auditorías y Cumplimiento</a>
-                    <a href="services.html#monitoreo">Monitoreo y Respuesta</a>
-                </div>
-            </div>
-            <a href="about-us.html">Sobre Nosotros</a>
-        </nav>
-        <!-- <nav>
-            <a href="index.html">Inicio</a>
-            <div class="dropdown">
-                <button class="dropbtn">
-                    <a href="services.html">Servicios</a><span class="arrow">&#9660;</span>
-                </button>
-                <div class="dropdown-content">
-                    <a href="services.html#infraestructura">Seguridad de Infraestructura</a>
-                    <a href="services.html#auditorias">Auditorías y Cumplimiento</a>
-                    <a href="services.html#monitoreo">Monitoreo y Respuesta</a>
-                </div>
-            </div>
-            <a href="about-us.html">Sobre Nosotros</a>
-        </nav> -->
-    </header>
+        <div class="dropdown-content">
+          <a href="services.html#infraestructura">Seguridad de Infraestructura</a>
+          <a href="services.html#auditorias">Auditorías y Cumplimiento</a>
+          <a href="services.html#monitoreo">Monitoreo y Respuesta</a>
+        </div>
+      </div>
+      <a href="about-us.html">Sobre Nosotros</a>
+    </nav>
+  </header>
 
   <section class="about-hero">
     <div class="about-content">
@@ -67,8 +47,7 @@
         <div class="card"><strong>Tamaño:<br></strong>2-10 empleados altamente especializados</div>
         <div class="card">
           <strong>Certificaciones:<br></strong>
-          <button class="btn-ver-mas"
-             onclick="mostrarCertificados()">
+          <button class="btn-ver-mas" onclick="mostrarCertificados()">
             Ver más
           </button>
         </div>
