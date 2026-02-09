@@ -32,9 +32,9 @@ body {
     width: 100%;
     top: 0;
     z-index: 100;
-    background: rgba(255,255,255,0.55);
+    background: rgba(255, 255, 255, 0.55);
     backdrop-filter: blur(10px);
-    padding: clamp(1rem, 3vw, 2rem) clamp(1.5rem, 5vw, 3rem);
+    padding: clamp(0.5rem, 1.5vw, 1.2rem) clamp(1rem, 5vw, 3rem);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -43,22 +43,47 @@ body {
 .header h1[data-headName] {
     display: flex;
     align-items: center;
-    gap: clamp(0.8rem, 3vw, 1.5rem);
-    font-size: clamp(1.8rem, 4vw, 2.5rem);
+    gap: clamp(0.5rem, 2vw, 1rem);
+    font-size: clamp(1.2rem, 2.5vw, 2rem);
     font-weight: 600;
+    color: var(--dark);
 }
 
 .header h1[data-headName] img {
-    height: clamp(50px, 10vw, 70px);
+    height: clamp(40px, 8vw, 60px);
 }
 
-.header a, .dropbtn {
+.header a {
     color: var(--dark);
     text-decoration: none;
-    margin-left: clamp(1rem, 3vw, 2rem);
+    margin-left: clamp(0.5rem, 2vw, 1.5rem);
     font-weight: 500;
-    font-size: clamp(1.2rem, 3vw, 1.4rem);
+    font-size: clamp(0.9rem, 1.5vw, 1.1rem);
 }
+
+/* ==============================
+   HEADER MOBILE (opcional si quieres ajustes extra)
+============================== */
+@media (max-width: 414px) {
+    .header {
+        padding: clamp(0.5rem, 2vw, 0.8rem) clamp(1rem, 4vw, 1.5rem);
+    }
+
+    .header h1[data-headName] {
+        gap: clamp(0.3rem, 2vw, 0.6rem);
+        font-size: clamp(1rem, 5vw, 1.5rem);
+    }
+
+    .header h1[data-headName] img {
+        height: clamp(30px, 10vw, 40px);
+    }
+
+    .header a {
+        margin-left: clamp(0.3rem, 2vw, 0.8rem);
+        font-size: clamp(0.8rem, 4vw, 1rem);
+    }
+}
+
 
 /* ==============================
    HERO
@@ -81,7 +106,7 @@ body {
 .hero-overlay {
     position: absolute;
     inset: 0;
-    background: linear-gradient(to bottom, rgba(15,23,42,0.35), rgba(15,23,42,0.75));
+    background: linear-gradient(to bottom, rgba(15, 23, 42, 0.35), rgba(15, 23, 42, 0.75));
     z-index: 1;
 }
 
@@ -98,24 +123,24 @@ body {
 }
 
 .hero-content h2 {
-    font-size: clamp(2rem, 5vw, 3rem);
+    font-size: clamp(1.8rem, 5vw, 3rem);
     line-height: 1.2;
 }
 
 .hero-content p {
     margin-top: clamp(1rem, 2vw, 2rem);
-    font-size: clamp(1.1rem, 2.5vw, 1.4rem);
+    font-size: clamp(1rem, 2.5vw, 1.2rem);
     opacity: 0.95;
 }
 
 .hero-content button {
     margin-top: clamp(1.5rem, 3vw, 2.5rem);
     width: fit-content;
-    padding: clamp(0.8rem, 2.5vw, 1.2rem) clamp(1.5rem, 4vw, 3rem);
+    padding: clamp(0.6rem, 2vw, 1rem) clamp(1.5rem, 4vw, 3rem);
     background: var(--blue-main);
     color: white;
     border: none;
-    border-radius: clamp(0.6rem, 1vw, 0.8rem);
+    border-radius: clamp(0.5rem, 1vw, 0.8rem);
     cursor: pointer;
     transition: background 0.3s;
 }
@@ -144,7 +169,7 @@ body {
 
 .card:hover {
     transform: translateY(-clamp(0.5rem, 1vw, 1rem));
-    box-shadow: 0 1.25rem 2.5rem rgba(0,0,0,0.1);
+    box-shadow: 0 1.25rem 2.5rem rgba(0, 0, 0, 0.1);
 }
 
 /* ==============================
@@ -171,11 +196,11 @@ footer {
     cursor: pointer;
     font-weight: 500;
     color: var(--dark);
-    margin-left: clamp(1rem, 3vw, 2rem);
-    font-size: clamp(1.2rem, 3vw, 1.4rem);
+    margin-left: clamp(0.5rem, 2vw, 1rem);
+    font-size: clamp(0.9rem, 1.8vw, 1rem);
     display: flex;
     align-items: center;
-    gap: clamp(0.2rem, 1vw, 0.4rem);
+    gap: clamp(0.1rem, 1vw, 0.3rem);
     transition: color 0.3s;
 }
 
@@ -194,7 +219,7 @@ footer {
     position: absolute;
     background-color: white;
     min-width: clamp(180px, 25vw, 200px);
-    box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.3);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.3);
     border-radius: 0.4rem;
     z-index: 200;
     top: 100%;
@@ -218,28 +243,33 @@ footer {
     display: block;
 }
 
+
 /* ==============================
    BOTON WHATSAPP
-============================= */
+============================== */
+
 #btn-whatsapp {
-    margin-top: clamp(1rem, 2vw, 2rem);
+    margin-top: 20px;
     width: fit-content;
-    padding: clamp(0.8rem, 2.5vw, 1.2rem) clamp(1.5rem, 4vw, 3rem);
+    padding: 14px 36px;
     background: #25D366;
+    /* verde WhatsApp */
     color: white;
     border: none;
-    border-radius: clamp(0.6rem, 1vw, 0.8rem);
+    border-radius: 8px;
     cursor: pointer;
     font-weight: 500;
 }
 
 #btn-whatsapp:hover {
     background: #1ebe57;
+    /* verde más oscuro al pasar el mouse */
 }
 
-/* ==============================
+
+/* ==========================
    ABOUT US HERO
-============================= */
+========================== */
 .about-hero {
     display: flex;
     justify-content: center;
@@ -263,7 +293,7 @@ footer {
 }
 
 .about-content p {
-    font-size: clamp(1rem, 2.5vw, 1.4rem);
+    font-size: clamp(1rem, 2.5vw, 1.2rem);
     line-height: 1.6;
     opacity: 0.9;
     margin-bottom: clamp(2rem, 4vw, 3rem);
@@ -286,7 +316,7 @@ footer {
 
 .about-cards .card:hover {
     transform: translateY(-clamp(0.5rem, 1vw, 1rem));
-    box-shadow: 0 1.25rem 2.5rem rgba(0,0,0,0.1);
+    box-shadow: 0 1.25rem 2.5rem rgba(0, 0, 0, 0.1);
 }
 
 /* Boton VER MAS */
@@ -338,7 +368,7 @@ footer {
 
 .cert-left img.active {
     filter: brightness(0.9);
-    box-shadow: inset 0 0 0 1000px rgba(0,0,0,0.25);
+    box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.25);
     transform: scale(1.2);
 }
 
@@ -381,63 +411,5 @@ footer {
 
 .gallery-row img:hover {
     transform: scale(1.08);
-    box-shadow: 0 0.5rem 1.25rem rgba(0,0,0,0.15);
-}
-
-/* ==============================
-   HAMBURGUESA
-============================= */
-.hamburger {
-    display: none;
-    flex-direction: column;
-    gap: 0.25rem;
-    border: none;
-    background: none;
-    cursor: pointer;
-    padding: 0.5rem;
-}
-
-.hamburger span {
-    display: block;
-    width: 28px;
-    height: 4px;
-    background-color: var(--dark);
-    border-radius: 2px;
-    transition: all 0.3s ease;
-}
-
-/* ==============================
-   MEDIA QUERIES
-============================= */
-@media (max-width: 768px) {
-    .hamburger {
-        display: flex;
-    }
-
-    .nav-links {
-        position: fixed;
-        top: clamp(3rem, 10vw, 60px);
-        right: -100%;
-        width: 70%;
-        height: 100vh;
-        background-color: rgba(255,255,255,0.95);
-        backdrop-filter: blur(10px);
-        flex-direction: column;
-        align-items: flex-start;
-        padding: clamp(1rem, 5vw, 2rem);
-        gap: clamp(1rem, 3vw, 2rem);
-        transition: right 0.3s ease;
-        z-index: 150;
-    }
-
-    .nav-links.open {
-        right: 0;
-    }
-
-    .dropdown-content {
-        position: static;
-        box-shadow: none;
-        border-radius: 0;
-        width: 100%;
-    }
+    box-shadow: 0 0.5rem 1.25rem rgba(0, 0, 0, 0.15);
 }
