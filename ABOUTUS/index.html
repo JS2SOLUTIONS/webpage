@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="icon" type="image/png" href="assets/images/logo.png" />
+  <title data-headName>Acerca de Nosotros |</title>
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <script defer src="assets/js/config.js"></script>
+  <script defer src="assets/js/main.js"></script>
+  <script defer src="assets/js/footer-links.js"></script>
+</head>
+
+<body>
+
+  <header class="header">
+    <h1 data-headName></h1>
+    <nav>
+      <a href="index.html">Inicio</a>
+      <div class="dropdown">
+        <button class="dropbtn">
+          <a href="services.html">Servicios</a><span class="arrow">&#9660;</span>
+        </button>
+        <div class="dropdown-content">
+          <a href="services.html#implementation">Implementación</a>
+          <a href="services.html#design">Diseño de redes</a>
+          <a href="services.html#VPN">Soluciones VPN</a>
+          <a href="services.html#hardening">Hardening</a>
+          <a href="services.html#monitoreo">Monitoreo infraestructura</a>
+          <a href="services.html#consultoria">Consultoría</a>
+        </div>
+      </div>
+      <a href="about-us.html">Sobre Nosotros</a>
+    </nav>
+  </header>
+
+  <section class="about-hero">
+    <div class="about-content">
+      <h1>Sobre Nosotros</h1>
+      <p>
+        Somos <strong>JS2 TECH SOLUTIONS S.A.S</strong>, una empresa especializada en ciberseguridad y networking,
+        con un enfoque principal en soluciones Fortinet. Contamos con amplia experiencia y un sólido conocimiento
+        técnico
+        que nos permite diseñar, implementar y administrar infraestructuras seguras y eficientes.
+      </p>
+      <br>
+      <p>La seguridad no es un producto, es un proceso continuo. Por eso nos dedicamos a proteger y optimizar tu
+        infraestructura tecnológica de forma confiable.</p>
+      <div class="about-cards">
+        <div class="card"><strong>Ubicación:<br></strong>Bogotá, Cundinamarca, Colombia</div>
+        <div class="card"><strong>Tamaño:<br></strong>2-10 empleados altamente especializados</div>
+        <div class="card">
+          <strong>Certificaciones:<br><br></strong>
+          <button class="btn-ver-mas" onclick="mostrarCertificados()">
+            Ver más
+          </button>
+        </div>
+      </div>
+    </div>
+    </div>
+  </section>
+
+
+  <section id="cert-seccion" class="cert-section">
+    <div class="cert-left">
+      <img src="assets/images/Fortinet_logo.svg" alt="Fortinet" class="cert-img active" data-info="info-Fortinet">
+      <img src="assets/images/NetskopeLogo.webp" alt="Netskope" class="cert-img" data-info="info-Netskope">
+    </div>
+    <div class="cert-right">
+      <div id="info-Fortinet" class="cert-info active">
+        <div class="info-gallery">
+          <!-- Fila 1: 2 imágenes -->
+          <div class="gallery-row">
+            <img src="assets/images/nse-certified-specialist-sp-security-operations.svg" alt="FCSS SecOps">
+            <img src="assets/images/nse-certified-specialist-sp-secure-networking.svg" alt="FCSS Security Networking">
+          </div>
+          <!-- Fila 2: 2 imágenes -->
+          <div class="gallery-row">
+            <img src="assets/images/nse-certified-professional-cloud-security.svg" alt="FCP Cloud Security">
+            <img src="assets/images/nse-certified-professional-secure-networking.svg" alt="FCP Network Security">
+          </div>
+          <!-- Fila 3: varias imágenes -->
+          <div class="gallery-row">
+            <img src="assets/images/fnac.png" alt="FNAC">
+            <img src="assets/images/FAC.png" alt="FAC">
+            <img src="assets/images/lanedge.png" alt="LAN EDGE">
+            <img src="assets/images/efw.png" alt="Enterprise Firewall">
+            <img src="assets/images/sdwan.png" alt="SD-WAN">
+            <img src="assets/images/SecOpsAnalyst.png" alt="SecOps">
+            <img src="assets/images/awsCloud.jpeg" alt="AWS Cloud FNT">
+            <img src="assets/images/ftnt_nse_7_public_cloud_security_architect_v7.6.4.png "
+              alt="Public Cloud Architect">
+          </div>
+        </div>
+      </div>
+
+      <div id="info-Netskope" class="cert-info">
+        <div class="info-gallery">
+          <div class="gallery-row">
+            <img src="assets/images/nsk100.png" alt="Netskope Administrator">
+            <img src="assets/images/nsk200.png" alt="Netskope Integrator">
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <footer>
+    © <span data-year></span> <span data-company></span>
+
+    <div class="footer-buttons">
+      <a class="footer-btn linkedin" data-link="linkedinLink" target="_blank" aria-label="LinkedIn">
+        <img src="assets/images/LinkedIn_logo.webp" alt="LinkedIn">
+      </a>
+
+      <a class="footer-btn whatsapp" data-link="whatsappLink" target="_blank" aria-label="WhatsApp">
+        <img src="assets/images/WhatsApp-logo.png" alt="WhatsApp">
+      </a>
+
+      <a class="footer-btn email" data-link="emailLink" aria-label="Correo">
+        <img src="assets/images/Email_icon.png" alt="Email">
+      </a>
+    </div>
+
+    <!-- <div class="footer-buttons">
+    <a href="https://www.linkedin.com/company/js2-tech-solutions" target="_blank" class="footer-btn linkedin" aria-label="LinkedIn">
+      <img src="assets/images/LinkedIn_logo.webp" alt="LinkedIn">
+    </a>
+
+    <a href="https://wa.me/573002584013" target="_blank" class="footer-btn whatsapp" aria-label="WhatsApp">
+      <img src="assets/images/WhatsApp-logo.png" alt="WhatsApp">
+    </a>
+
+    <a href="mailto:contacto@js2solutions.com.co" class="footer-btn email" aria-label="Correo">
+      <img src="assets/images/Email_icon.png" alt="Email">
+    </a>
+  </div> -->
+  </footer>
+
+</body>
+
+</html>
