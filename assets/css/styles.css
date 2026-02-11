@@ -702,10 +702,41 @@ html {
     }
 
     /* puntos verticales */
-    .vertical-nav {
-        display: none;
-    }
 
+
+    /* .vertical-nav {
+        display: none;
+    } */
+
+  .vertical-nav {
+    position: fixed;
+    bottom: 1.8rem;
+    left: 50%;
+    transform: translateX(-50%);
+    right: auto;
+    top: auto;
+
+    flex-direction: row;
+    gap: 1.2rem;
+
+    background: rgba(90, 90, 90, 0.22);
+    backdrop-filter: blur(12px);
+
+    padding: 0.9rem 1.5rem;
+    border-radius: 60px;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+  }
+
+  .vertical-nav .dot {
+    width: 16px;
+    height: 16px;
+    background: rgba(255, 255, 255, 0.6);
+  }
+
+  .vertical-nav .dot.active {
+    background: #6fa8dc;
+    box-shadow: 0 0 0 6px rgba(111, 168, 220, 0.25);
+  }
 
     /* Pagina servicios */
     .service-card,

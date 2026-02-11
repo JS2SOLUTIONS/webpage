@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // ------------------------------
   const headerH1 = document.querySelector("h1[data-headName]");
   if (headerH1) {
-    headerH1.innerHTML = `<img src="${SITE_CONFIG.logoSrc}" alt="Logo"> ${SITE_CONFIG.headerName}`;
+    headerH1.innerHTML = `<a href="index.html"> <img src="${SITE_CONFIG.logoSrc}" alt="Logo" > </a> ${SITE_CONFIG.headerName}`;
   }
 
   // ------------------------------
@@ -131,11 +131,4 @@ document.querySelectorAll(".cert-left img").forEach(img => {
   });
 });
 
-// Menu hamburguesa
-const hamburger = document.querySelector(".hamburger");
-const navLinks = document.querySelector(".nav-links");
-
-hamburger.addEventListener("click", () => {
-  navLinks.classList.toggle("open");
-});
 
