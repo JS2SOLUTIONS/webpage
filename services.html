@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="icon" type="image/png" href="assets/images/logo.png" />
+  <title data-headName>Servicios |</title>
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <script defer src="assets/js/config.js"></script>
+  <script defer src="assets/js/main.js"></script>
+  <script defer src="assets/js/footer-links.js"></script>
+  <script defer src="assets/js/scroll.js"></script>
+</head>
+
+<body>
+
+  <header class="header">
+    <h1 data-headName></h1>
+    <nav>
+      <a href="index.html">Inicio</a>
+      <div class="dropdown">
+        <button class="dropbtn">
+          <a href="services.html">Servicios</a><span class="arrow">&#9660;</span>
+        </button>
+        <div class="dropdown-content">
+          <a href="services.html#implementation">Implementación</a>
+          <a href="services.html#design">Diseño de redes</a>
+          <a href="services.html#monitoreo">Monitoreo y Respuesta</a>
+        </div>
+      </div>
+      <a href="about-us.html">Sobre Nosotros</a>
+    </nav>
+  </header>
+
+  <section class="services">
+
+    <!-- HERO 1 -->
+    <article class="service-hero" id="implementation">
+      <video autoplay muted loop playsinline class="bg-video">
+        <source src="assets/video/networking.mp4" type="video/mp4">
+      </video>
+
+      <div class="overlay">
+        <div class="service-content left">
+          <div class="service-card">
+            <h2>Implementación equipos de ciberseguridad</h2>
+            <p>
+              Configuración e implementación de soluciones Fortinet para
+              proteger tu infraestructura de amenazas externas.
+            </p>
+          </div>
+
+          <div class="service-examples">
+            <h3>Detalles</h3>
+            <ul>
+              <li>Instalación, configuración y puesta en marcha de firewalls de nueva generación para proteger la red
+                perimetral y segmentar el tráfico interno. El servicio incluye definición de políticas de seguridad,
+                configuración de reglas de acceso, prevención de intrusiones (IPS), filtrado de aplicaciones y pruebas
+                de funcionamiento para garantizar una protección efectiva contra amenazas externas e internas.</li>
+              <li>Despliegue de soluciones de detección y respuesta ante amenazas en red y endpoints, permitiendo
+                identificar comportamientos maliciosos en tiempo real. El servicio contempla la instalación de agentes o
+                sensores, integración con la infraestructura existente, configuración de alertas, afinamiento de reglas
+                y validación del correcto monitoreo de eventos de seguridad.</li>
+              <li>Configuración de equipos y plataformas de seguridad para el control de acceso seguro a sistemas y
+                redes, como soluciones de autenticación multifactor (MFA) y control de acceso a la red (NAC). Incluye
+                integración con directorios corporativos, definición de perfiles de usuario, políticas de acceso y
+                pruebas de acceso seguro para usuarios internos y remotos.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <!-- HERO 2 (INTERCALADO) -->
+    <article class="service-hero" id="design">
+      <video autoplay muted loop playsinline class="bg-video">
+        <source src="assets/video/network-connection.mp4" type="video/mp4">
+      </video>
+
+      <div class="overlay">
+        <div class="service-content right">
+          <div class="service-card">
+            <h2>Diseño Redes Seguras</h2>
+            <p>
+              Diseño y construcción de infraestructuras de
+              red segmentadas y resilientes para tu empresa.
+            </p>
+          </div>
+
+          <div class="service-examples">
+            <h3>Detalles</h3>
+            <ul>
+              <li>Definición de una arquitectura de red segura basada en segmentación lógica y física (VLANs, zonas de
+                seguridad y DMZ), minimizando la superficie de ataque. El diseño contempla flujos de comunicación
+                controlados, principios de mínimo privilegio y alineación con buenas prácticas de ciberseguridad para
+                proteger sistemas críticos y datos sensibles.</li>
+              <li>Elaboración de un diseño de red bajo el modelo Zero Trust, donde ningún dispositivo o usuario es
+                confiable por defecto. Incluye definición de controles de acceso, autenticación fuerte,
+                microsegmentación, verificación continua de identidad y diseño de flujos seguros para usuarios internos,
+                remotos y servicios en la nube.</li>
+              <li>Diseño de infraestructura de red segura orientada a la continuidad del negocio, incorporando
+                redundancia de enlaces, balanceo de carga, tolerancia a fallos y planes de recuperación. Se consideran
+                controles de seguridad integrados, monitoreo centralizado y mitigación de ataques que puedan afectar la
+                disponibilidad del servicio.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </article>
+
+  </section>
+
+  <nav class="vertical-nav">
+    <a href="#implementation" class="dot"></a>
+    <a href="#design" class="dot"></a>
+    <a href="#cloud" class="dot"></a>
+  </nav>
+
+
+
+  <footer>
+    © <span data-year></span> <span data-company></span>
+
+    <div class="footer-buttons">
+      <a class="footer-btn linkedin" data-link="linkedinLink" target="_blank" aria-label="LinkedIn">
+        <img src="assets/images/LinkedIn_logo.webp" alt="LinkedIn">
+      </a>
+
+      <a class="footer-btn whatsapp" data-link="whatsappLink" target="_blank" aria-label="WhatsApp">
+        <img src="assets/images/WhatsApp-logo.png" alt="WhatsApp">
+      </a>
+
+      <a class="footer-btn email" data-link="emailLink" aria-label="Correo">
+        <img src="assets/images/Email_icon.png" alt="Email">
+      </a>
+    </div>
+
+    <!-- <div class="footer-buttons">
+    <a href="https://www.linkedin.com/company/js2-tech-solutions" target="_blank" class="footer-btn linkedin" aria-label="LinkedIn">
+      <img src="assets/images/LinkedIn_logo.webp" alt="LinkedIn">
+    </a>
+
+    <a href="https://wa.me/573002584013" target="_blank" class="footer-btn whatsapp" aria-label="WhatsApp">
+      <img src="assets/images/WhatsApp-logo.png" alt="WhatsApp">
+    </a>
+
+    <a href="mailto:contacto@js2solutions.com.co" class="footer-btn email" aria-label="Correo">
+      <img src="assets/images/Email_icon.png" alt="Email">
+    </a>
+  </div> -->
+  </footer>
+
+</body>
+
+</html>
