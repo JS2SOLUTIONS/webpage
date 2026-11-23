@@ -1,134 +1,75 @@
-// ==============================
-// MAIN.JS
-// ==============================
-
-// Autoplay seguro para el video hero
-window.addEventListener("load", () => {
-  const video = document.querySelector(".hero-video");
-  video?.play().catch(() => {
-    // Safari / iOS requiere interacción
-  });
-});
-
 document.addEventListener("DOMContentLoaded", () => {
+  const C = SITE_CONFIG;
+  const links = {
+    whatsappLink: `https://wa.me/${C.whatsapp}?text=${encodeURIComponent(C.whatsappMessage)}`,
+    emailLink: `mailto:${C.email}`,
+    linkedinLink: C.linkedinLink
+  };
 
-  // ------------------------------
-  // TÍTULO DINÁMICO + TEXTO ESTÁTICO HEAD
-  // ------------------------------
-  const titleTagHead = document.querySelector("title[data-headName]");
-  if (titleTagHead) {
-    const staticText = titleTagHead.textContent.trim(); // texto que pones en cada HTML
-    titleTagHead.textContent = `${staticText} ${SITE_CONFIG.headerName}`;
-  }
+  // Enlaces de contacto desde config.js
+  document.querySelectorAll("[data-link]").forEach(a => { a.href = links[a.dataset.link]; });
+  document.querySelectorAll("[data-email]").forEach(el => { el.textContent = C.email; });
+  document.querySelectorAll("[data-year]").forEach(el => { el.textContent = new Date().getFullYear(); });
 
-  // ------------------------------
-  // HEADER: Logo + nombre empresa
-  // ------------------------------
-  const headerH1 = document.querySelector("h1[data-headName]");
-  if (headerH1) {
-    headerH1.innerHTML = `<a href="/"> <img src="../${SITE_CONFIG.logoSrc}" alt="Logo" > </a> ${SITE_CONFIG.headerName}`;
-  }
-
-  // ------------------------------
-  // FOOTER: Año y empresa
-  // ------------------------------
-  document.querySelectorAll("footer [data-company]").forEach(el => el.textContent = SITE_CONFIG.companyName);
-  document.querySelectorAll("footer [data-year]").forEach(el => el.textContent = SITE_CONFIG.year);
-
-  // ------------------------------
-  // BOTÓN CONTACTO
-  // ------------------------------
-  document.getElementById("btn-contact")?.addEventListener("click", () => {
-    window.location.href = `mailto:${SITE_CONFIG.email}`;
+  // Menú móvil
+  const header = document.querySelector(".header");
+  const toggle = document.querySelector(".menu-toggle");
+  toggle?.addEventListener("click", () => {
+    const open = header.classList.toggle("nav-open");
+    toggle.setAttribute("aria-expanded", open);
   });
 
-
-});
-
-// ------------------------------
-// DROPDOWN SERVICIOS
-// ------------------------------
-
-// Detectar dropdowns
-document.querySelectorAll(".dropdown").forEach(drop => {
-
-  const btn = drop.querySelector(".dropbtn");
-  const menu = drop.querySelector(".dropdown-content");
-
-  // DESKTOP: hover
-  drop.addEventListener("mouseenter", () => {
-    menu.classList.add("show");
-    drop.classList.add("open"); // flecha gira
-  });
-
-  drop.addEventListener("mouseleave", () => {
-    menu.classList.remove("show");
-    drop.classList.remove("open"); // flecha vuelve
-  });
-
-  // MÓVIL: click
-  btn.addEventListener("click", (e) => {
-    e.stopPropagation();
-    const isShown = menu.classList.contains("show");
-    if (isShown) {
-      menu.classList.remove("show");
-      drop.classList.remove("open");
-    } else {
-      menu.classList.add("show");
-      drop.classList.add("open");
-    }
-  });
-
-});
-
-// Cerrar todos los dropdowns al hacer clic fuera
-window.addEventListener("click", () => {
+  // Dropdown Servicios: hover en escritorio, clic en móvil/teclado
   document.querySelectorAll(".dropdown").forEach(drop => {
-    drop.classList.remove("open");
-    drop.querySelector(".dropdown-content")?.classList.remove("show");
+    const btn = drop.querySelector(".dropbtn");
+    const set = open => { drop.classList.toggle("open", open); btn.setAttribute("aria-expanded", open); };
+    const canHover = matchMedia("(hover: hover) and (min-width: 901px)").matches;
+    if (canHover) {
+      drop.addEventListener("mouseenter", () => set(true));
+      drop.addEventListener("mouseleave", () => set(false));
+    }
+    btn.addEventListener("click", e => { e.stopPropagation(); set(!drop.classList.contains("open")); });
+    document.addEventListener("click", () => set(false));
+    drop.addEventListener("keydown", e => { if (e.key === "Escape") { set(false); btn.focus(); } });
   });
-});
 
+  // Animación al hacer scroll + resaltar submenú de servicios
+  const subLinks = document.querySelectorAll(".subnav a");
+  if ("IntersectionObserver" in window) {
+    const io = new IntersectionObserver(entries => entries.forEach(e => {
+      if (e.isIntersecting) { e.target.classList.add("visible"); io.unobserve(e.target); }
+    }), { threshold: 0.12 });
+    document.querySelectorAll(".reveal").forEach(el => io.observe(el));
 
-// Botón WhatsApp
-document.getElementById("btn-whatsapp")?.addEventListener("click", () => {
-  const phone = SITE_CONFIG.whatsapp;
-  if (phone) {
-    // WhatsApp web + mensaje inicial opcional
-    const url = `https://wa.me/${phone.replace(/\D/g, '')}`;
-    window.open(url, "_blank");
+    if (subLinks.length) {
+      const so = new IntersectionObserver(entries => entries.forEach(e => {
+        if (!e.isIntersecting) return;
+        subLinks.forEach(a => a.classList.toggle("active", a.hash === `#${e.target.id}`));
+      }), { rootMargin: "-40% 0px -55% 0px" });
+      subLinks.forEach(a => { const s = document.querySelector(a.hash); if (s) so.observe(s); });
+    }
+  } else {
+    document.querySelectorAll(".reveal").forEach(el => el.classList.add("visible"));
   }
-});
 
+  // Preseleccionar servicio desde /contacto/?servicio=<id>
+  const pre = new URLSearchParams(location.search).get("servicio");
+  const opt = pre && [...document.querySelectorAll("#contact-form option")].find(o => o.dataset.id === pre);
+  if (opt) opt.selected = true;
 
-// Mostrar sección de certificados al hacer clic en el enlace - about us
-function mostrarCertificados() {
-  const certSection = document.getElementById('cert-seccion');
-
-  // Mostrar la sección
-  certSection.classList.add('active');
-
-  // Hacer scroll suave
-  certSection.scrollIntoView({ behavior: 'smooth' });
-}
-
-
-
-// Cambiar info al hacer clic en imágenes
-document.querySelectorAll(".cert-left img").forEach(img => {
-  img.addEventListener("click", () => {
-    const infoId = img.dataset.info;
-
-    document.querySelectorAll(".cert-left img").forEach(i =>
-      i.classList.remove("active")
-    );
-    img.classList.add("active");
-
-    document.querySelectorAll(".cert-info").forEach(info =>
-      info.classList.remove("active")
-    );
-    document.getElementById(infoId).classList.add("active");
+  // Formulario de contacto: abre el correo del visitante con el mensaje armado (sitio estático, sin servidor)
+  document.getElementById("contact-form")?.addEventListener("submit", e => {
+    e.preventDefault();
+    const f = new FormData(e.target);
+    const subject = `Solicitud web: ${f.get("servicio")} - ${f.get("empresa") || f.get("nombre")}`;
+    const body = [
+      `Nombre: ${f.get("nombre")}`,
+      `Empresa: ${f.get("empresa") || "-"}`,
+      `Teléfono: ${f.get("telefono") || "-"}`,
+      `Servicio: ${f.get("servicio")}`,
+      "",
+      f.get("mensaje")
+    ].join("\n");
+    location.href = `mailto:${C.email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
   });
 });
-
-

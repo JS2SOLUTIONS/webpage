@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://js2solutions.com.co/sitemap.xml
