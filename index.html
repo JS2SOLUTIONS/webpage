@@ -4,6 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; media-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'; upgrade-insecure-requests">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
     <title>JS2 Solutions | Ciberseguridad y Networking en Bogotá</title>
     <meta name="description" content="JS2 Tech Solutions: expertos en ciberseguridad y networking en Bogotá. Implementación Fortinet y Netskope, diseño de redes seguras, VPN, hardening, monitoreo 7x24 y consultoría de TI.">
     <link rel="canonical" href="https://js2solutions.com.co/">
@@ -15,9 +17,9 @@
     <meta property="og:locale" content="es_CO">
     <meta name="theme-color" content="#0b1220">
     <link rel="icon" type="image/png" href="/assets/images/logo.png">
-    <link rel="stylesheet" href="/assets/css/styles.css?v=2">
-    <script defer src="/assets/js/config.js?v=2"></script>
-    <script defer src="/assets/js/main.js?v=2"></script>
+    <link rel="stylesheet" href="/assets/css/styles.css?v=3">
+    <script defer src="/assets/js/config.js?v=3"></script>
+    <script defer src="/assets/js/main.js?v=3"></script>
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
@@ -184,7 +186,7 @@
                     <img src="/assets/images/nse-certified-professional-cloud-security.svg" alt="Fortinet Certified Professional Cloud Security" loading="lazy">
                     <img src="/assets/images/nse-certified-professional-secure-networking.svg" alt="Fortinet Certified Professional Network Security" loading="lazy">
                 </div>
-                <p style="text-align:center;margin-top:2rem"><a class="card-link" href="/aboutus/#certificaciones">Ver todas las certificaciones →</a></p>
+                <p class="center-link"><a class="card-link" href="/aboutus/#certificaciones">Ver todas las certificaciones →</a></p>
             </div>
         </section>
 
@@ -271,6 +273,16 @@
                         <li><a href="/contacto/">Contacto</a></li>
                         <li><a data-link="emailLink"><span data-email></span></a></li>
                         <li>Bogotá, Colombia</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>Legal</h3>
+                    <ul>
+                        <li><a href="/privacidad/">Tratamiento de datos personales</a></li>
+                        <li><a href="/privacidad/#solicitud">Ejercer mis derechos (Habeas Data)</a></li>
+                        <li><a href="/terminos/">Términos y condiciones</a></li>
+                        <li><a href="/cookies/">Política de cookies</a></li>
+                        <li><a href="/.well-known/security.txt">Reportar una vulnerabilidad</a></li>
                     </ul>
                 </div>
             </div>
