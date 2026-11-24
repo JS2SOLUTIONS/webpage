@@ -79,7 +79,7 @@ document.addEventListener("DOMContentLoaded", () => {
     bar.className = "cookie-bar";
     bar.setAttribute("role", "region");
     bar.setAttribute("aria-label", "Aviso de cookies");
-    bar.innerHTML = `<p>Este sitio solo usa cookies técnicas necesarias para funcionar y protegerse. No usamos cookies de analítica ni publicidad. <a href="/cookies/">Más información</a></p>
+    bar.innerHTML = `<p>Este sitio solo usa cookies técnicas necesarias para funcionar y protegerse, y mide las visitas de forma anónima sin cookies. No usamos cookies de analítica ni publicidad. <a href="/cookies/">Más información</a></p>
       <button class="btn btn-primary" type="button">Entendido</button>`;
     bar.querySelector("button").addEventListener("click", () => { store.set("ok"); bar.remove(); });
     document.body.appendChild(bar);
